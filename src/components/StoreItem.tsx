@@ -4,6 +4,6 @@ type StoreItemProps ={
     price: number
     imgUrl: string
 }
-export function StoreItem ({id, name, price, imgUrl}){
+export function StoreItem ({ id, name, price, imgUrl }: StoreItemProps){
 
 }
