@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export function NavBar(){
     return (
     
-    <NavbarBs className="bg-white shadow-sm mb-3"> 
+    <NavbarBs sticky="top" className="bg-white shadow-sm mb-3"> 
     <Container>
         <Nav className="me-auto">
             <Nav.Link to="/" as={NavLink}>
@@ -29,7 +29,7 @@ export function NavBar(){
              d-flex
              justify-content-center
              align-items-center" 
-             
+
          style={{
             color:"white", 
             width:"1.5rem", 
