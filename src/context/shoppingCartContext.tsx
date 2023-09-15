@@ -5,7 +5,7 @@ const ShoppingCartContext = createContext({});
 export function useShopingCart(){
     return useContext(ShoppingCartContext)
 }
-type ShoppingCartProviderProps{
+type ShoppingCartProviderProps = {
     children: ReactNode  /// is the type given to every react childre property
 }
 
