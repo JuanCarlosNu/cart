@@ -25,7 +25,10 @@ export function StoreItem ({ id, name, price, imgUrl }: StoreItemProps)
                     <span className="ms-2 text-muted">{formatCurrency(price)}</span>
                 </Card.Title>
                 <div className="mt-auto">
-                    {quantity===0? <Button>Add to Cart</Button>: null }
+                    {quantity===0? <Button className="W-100">Add to Cart</Button>: 
+                    <div >
+
+                    </div> }
 
                 </div>
 
