@@ -36,7 +36,7 @@ export function StoreItem ({ id, name, price, imgUrl }: StoreItemProps)
                         </div>
                         <Button>-</Button>
                         </div>
-                          second row
+                        <Button variant="danger " size="sm">remove</Button>
                     </div> 
 }
 
