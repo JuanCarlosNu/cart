@@ -1,4 +1,4 @@
-import { Card } from "react-bootstrap"
+import { Button, Card } from "react-bootstrap"
 import { formatCurrency } from "../utilities/formatCurrency"
 
 
@@ -25,6 +25,7 @@ export function StoreItem ({ id, name, price, imgUrl }: StoreItemProps)
                     <span className="ms-2 text-muted">{formatCurrency(price)}</span>
                 </Card.Title>
                 <div className="mt-auto">
+                    {quantity===0? <Button>Add to Cart</Button>: null }
 
                 </div>
 
