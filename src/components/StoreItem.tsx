@@ -29,8 +29,9 @@ export function StoreItem ({ id, name, price, imgUrl }: StoreItemProps)
                     <div className="d-flex align-items-center flex-column" style={{gap:"0.5rem"}} >
                         <div className="d-flex align-items-center justify-content-center"
                          style={{gap:".5rem"}}>
-                            first row
-                         </div>
+                        <Button>+</Button>
+                        <Button>-</Button>
+                        </div>
                           second row
                     </div> 
 }
