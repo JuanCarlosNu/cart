@@ -1,4 +1,5 @@
 import { Card } from "react-bootstrap"
+import { formatCurrency } from "../utilities/formatCurrency"
 
 
 type StoreItemProps ={
