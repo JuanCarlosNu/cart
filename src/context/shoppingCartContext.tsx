@@ -1,12 +1,23 @@
 import { ReactNode, createContext, useContext } from "react";
+type ShoppingCartProviderProps = {
+    children: ReactNode  /// is the type given to every react childre property
+}
 
-const ShoppingCartContext = createContext({});
+type shoppingcartContext = {
+
+    getItemQuantity: (id: number)=> number;
+    increaseCartQuantity: (id: number)=> void;
+    decreaseCartQuantity: (id: number)=> void;
+    removeItemQuantity: (id: number)=> void;
+
+
+} 
+
+
+const ShoppingCartContext = createContext({} as shoppingcartContext);
 
 export function useShopingCart(){
     return useContext(ShoppingCartContext)
-}
-type ShoppingCartProviderProps = {
-    children: ReactNode  /// is the type given to every react childre property
 }
 
 export function ShoppingCartProvider({children}: ShoppingCartProviderProps){
