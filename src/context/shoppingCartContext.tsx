@@ -8,7 +8,7 @@ type shoppingcartContext = {
     getItemQuantity: (id: number)=> number;
     increaseCartQuantity: (id: number)=> void;
     decreaseCartQuantity: (id: number)=> void;
-    removeItemQuantity: (id: number)=> void;
+    removeFromCart: (id: number)=> void;
 
 
 } 
