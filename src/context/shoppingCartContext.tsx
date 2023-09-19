@@ -31,7 +31,7 @@ export function ShoppingCartProvider({children}: ShoppingCartProviderProps){
 
     const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
-    const cartQuantity = cartItems.reduce((quantity, item)=> 
+    const cartQuantity = cartItems.reduce((quantity, item)=>               /// counts every item.
     item.quantity + quantity, 0)
 
     
@@ -87,6 +87,7 @@ export function ShoppingCartProvider({children}: ShoppingCartProviderProps){
             decreaseCartQuantity,
             removeFromCart,
             cartItems,
+            cartQuantity,
               }}
               >
 
