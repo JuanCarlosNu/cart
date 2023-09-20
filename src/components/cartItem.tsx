@@ -1,4 +1,5 @@
 import { useShoppingCart } from "../context/shoppingCartContext";
+import storeItems from "../data/items.json";
 
 
 type CartItemProps = {
@@ -11,7 +12,7 @@ export function CartItem ({ id ,quantity }) {
 
 const { removeFromCart } = useShoppingCart();
 
-const item = storeItems
+
 
 
 }
