@@ -1,14 +1,14 @@
-import { CarouselItem, Offcanvas, Stack } from "react-bootstrap"
+import { Offcanvas, Stack } from "react-bootstrap"
 import { useShoppingCart } from "../context/shoppingCartContext"
+import { CartItem } from "./cartItem";
 
 type ShoppingCartProps = {
-
-    isOpen: boolean
+ isOpen: boolean
 }
 
 export function ShoppingCart({isOpen}: ShoppingCartProps){
     
-    const {closeCart} = useShoppingCart();
+    const {closeCart, cartItems} = useShoppingCart();
 
 
 return  <Offcanvas show={isOpen} onHide={closeCart} placement="end">
@@ -17,9 +17,9 @@ return  <Offcanvas show={isOpen} onHide={closeCart} placement="end">
         </Offcanvas.Header>
         <Offcanvas.Body>
             <Stack gap={3}>
-                {CartItems.map(item=> 
-                    <CarouselItem key={item.id} {...item} />
-                    )}
+                {cartItems.map(item=>(
+                    <CartItem key={item.id} {...item} />
+                ))}
             </Stack>
         </Offcanvas.Body>
         </Offcanvas>
