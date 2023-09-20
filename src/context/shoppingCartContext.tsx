@@ -66,6 +66,7 @@ export function ShoppingCartProvider({children}: ShoppingCartProviderProps){
     function decreaseCartQuantity(id:number){
         setCartItems(currItems => {
             if(currItems.find(item=> item.id === id)?.quantity=== 1){  //if our id item has quantity equal to one,
+                
                 return currItems.filter (item=> item.id != id)      ///it disapears, so filter all the rest of them.
             }else{
                 return currItems.map(item=>{                
@@ -82,7 +83,7 @@ export function ShoppingCartProvider({children}: ShoppingCartProviderProps){
     };
     function removeFromCart(id: number){
         setCartItems(currItems=>{
-            return currItems.filter(item=> item.id == id)
+            return currItems.filter(item=> item.id !== id)
         })
     };
 
