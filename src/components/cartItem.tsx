@@ -1,4 +1,4 @@
-import { Stack } from "react-bootstrap";
+import { Button, Stack } from "react-bootstrap";
 import { useShoppingCart } from "../context/shoppingCartContext";
 import storeItems from "../data/items.json";
 import { formatCurrency } from "../utilities/formatCurrency";
@@ -27,6 +27,13 @@ className="text-muted" style={{fontSize: "0.65rem"}}> X {quantity}  </span>}
 <div className="text-muted" style={{fontSize: ".75rem"}}>
     {formatCurrency(item.price)}
 </div>
+<div>
+    {formatCurrency(item.price  * quantity)}
+    <Button variant="outline-danger" size="sm" onClick={()=> removeFromCart(item.id)}> 
+    &times;     
+    </Button>
+</div>
+
 
 </div>
 </Stack>  
