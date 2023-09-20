@@ -48,7 +48,7 @@ export function StoreItem ({ id, name, price, imgUrl }: StoreItemProps)
                         <div>
                         <span className="fs-3">{quantity}</span>
                         in cart
-                        </div>)
+                        </div>
                         <Button onClick={()=>decreaseCartQuantity(id)}>-</Button>
                         </div>
                         <Button onClick={()=>removeFromCart(id)} variant="danger " size="sm">remove</Button>

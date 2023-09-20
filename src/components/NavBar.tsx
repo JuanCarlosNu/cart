@@ -5,6 +5,7 @@ import { useShoppingCart } from "../context/shoppingCartContext";
 export function NavBar(){
 
   const {openCart, cartQuantity} = useShoppingCart();
+  
     return (
     
     <NavbarBs sticky="top" className="bg-white shadow-sm mb-3"> 
