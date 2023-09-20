@@ -1,7 +1,12 @@
 import { Offcanvas } from "react-bootstrap"
 import { useShoppingCart } from "../context/shoppingCartContext"
 
-export function ShoppingCart({isOpen}){
+type ShoppingCartProps = {
+
+    isOpen: boolean
+}
+
+export function ShoppingCart({isOpen}: ShoppingCartProps){
     
     const {closeCart} = useShoppingCart();
 
