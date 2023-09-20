@@ -1,4 +1,4 @@
-import { Offcanvas, Stack } from "react-bootstrap"
+import { CarouselItem, Offcanvas, Stack } from "react-bootstrap"
 import { useShoppingCart } from "../context/shoppingCartContext"
 
 type ShoppingCartProps = {
@@ -17,7 +17,9 @@ return  <Offcanvas show={isOpen} onHide={closeCart} placement="end">
         </Offcanvas.Header>
         <Offcanvas.Body>
             <Stack gap={3}>
-                
+                {CartItems.map(item=> 
+                    <CarouselItem key={item.id} {...item} />
+                    )}
             </Stack>
         </Offcanvas.Body>
         </Offcanvas>
