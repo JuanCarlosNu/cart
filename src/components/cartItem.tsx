@@ -1,4 +1,5 @@
-import { StoreItem } from "./StoreItem";
+import { useShoppingCart } from "../context/shoppingCartContext";
+
 
 type CartItemProps = {
 
@@ -7,8 +8,10 @@ type CartItemProps = {
 }
 
 export function CartItem ({ id ,quantity }) {
-    
+
 const { removeFromCart } = useShoppingCart();
+
+const item = storeItems
 
 
 }
