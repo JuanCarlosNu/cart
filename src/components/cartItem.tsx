@@ -22,7 +22,7 @@ align-items-center">
     style={{width: "125px", height: "75px", objectFit: "cover"}}
 />
 <div className="me-auto"> 
-      <div>
+      <div id="NameAndQ">
         {item.name} {" "}  {quantity >1 && ( 
         <span className="text-muted" style={{fontSize: "0.65rem" }}>
              X {quantity} 
@@ -30,12 +30,12 @@ align-items-center">
                          )}
       </div> 
 
-<div className="text-muted" style={{fontSize: ".75rem"}}>
+<div id="price" className="text-muted" style={{fontSize: ".75rem"}}>
     {formatCurrency(item.price)}
 </div>
 </div>
 
-<div>
+<div id="item_totalprice">
     {formatCurrency(item.price  * quantity)}
     </div>
 
